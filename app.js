@@ -1,4 +1,11 @@
 $( document ).ready( function () {
+
+    /**
+     *
+     * Initialize fullpage.js
+     *
+     */
+
     $( '#fullpage' ).fullpage( {
         navigation: true,
         slidesNavigation: true,
@@ -6,12 +13,35 @@ $( document ).ready( function () {
             'home',
             'portfolio',
             'bio',
-            'proficiences',
+            'proficiencies',
             'contact'
-            
         ],
         menu: '#myNavbar',
         controlArrows: true,
-        verticalCentered: false
+        responsiveWidth: 450,
+        fixedElements: '#navWrapper',
+        afterResponsive: function (isResponsive) {
+
+            if ( isResponsive ) {
+                $( '.proficiencies' ).removeClass( 'section fp-section' ).removeAttr( 'data-anchor' );
+                $( '.skills' ).addClass( 'section fp-section' ).attr( 'data-anchor', 'proficiencies' );
+            }
+            else {
+                $( '.proficiencies' ).addClass( 'section fp-section' ).attr( 'data-anchor', 'proficiencies' );
+                $( '.skills' ).removeClass( 'section fp-section' ).removeAttr( 'data-anchor' );
+            };
+        }
     } );
+
+    /**
+     *
+     * Sidebar toggle
+     *
+     */
+
+    $( '.menuToggle' ).click( function () {
+        $( '#mobileNav' ).toggleClass( 'w3-show' );
+    } );
+    
+
 } );
