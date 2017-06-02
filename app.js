@@ -18,18 +18,30 @@ $( document ).ready( function () {
         ],
         menu: '#myNavbar',
         controlArrows: true,
-        responsiveWidth: 450,
+        responsiveWidth: 768,
         fixedElements: '#navWrapper',
-        afterResponsive: function (isResponsive) {
+        navigationTooltips: [
+            'Home',
+            'Portfolio',
+            'Bio',
+            'Proficiencies',
+            'Contact Me'
+        ],
+        afterRender: function ( ) {
+            if ( $(window).width() <= 768 ) {
+                var lastScrollTop = 0;
 
-            if ( isResponsive ) {
-                $( '.proficiencies' ).removeClass( 'section fp-section' ).removeAttr( 'data-anchor' );
-                $( '.skills' ).addClass( 'section fp-section' ).attr( 'data-anchor', 'proficiencies' );
+                $( window ).on( 'scroll', function ( event ) {
+                    var st = $( this ).scrollTop();
+                    if ( st < lastScrollTop ) {
+                        $( '#myNavbar' ).slideDown();
+                    }
+                    else {
+                        $( '#myNavbar' ).slideUp();
+                    }
+                    lastScrollTop = st;
+                } );
             }
-            else {
-                $( '.proficiencies' ).addClass( 'section fp-section' ).attr( 'data-anchor', 'proficiencies' );
-                $( '.skills' ).removeClass( 'section fp-section' ).removeAttr( 'data-anchor' );
-            };
         }
     } );
 
@@ -42,6 +54,5 @@ $( document ).ready( function () {
     $( '.menuToggle' ).click( function () {
         $( '#mobileNav' ).toggleClass( 'w3-show' );
     } );
-    
 
 } );
