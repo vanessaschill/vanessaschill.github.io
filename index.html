@@ -12,28 +12,24 @@
 
     <body>
 
-        <div class="w3-top">
-            <div class="w3-bar w3-white w3-card-2" id="myNavbar">
-                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()"
-                    title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-                <a href="#home" class="w3-bar-item w3-hover-black w3-button"><b>VANESSA SCHILL</b></a>
-                <a href="#portfolio" class="w3-bar-item w3-hover-black w3-button w3-hide-small"><i class="fa fa-folder-open"></i> PORTFOLIO</a>
-                <a href="#bio" class="w3-bar-item w3-hover-black w3-button w3-hide-small"><i class="fa fa-user"></i> BIO</a>
-                <a href="#proficiencies" class="w3-bar-item w3-hover-black w3-button w3-hide-small"><i class="fa fa-check"></i> PROFICIENCIES</a>
-                <a href="#contact" class="w3-bar-item w3-hover-black w3-button w3-hide-small"><i class="fa fa-bullhorn"></i> CONTACT</a>
-                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+        <div class="w3-top" id="navWrapper">
+            <div class="w3-bar w3-white w3-card-2 w3-animate-top" id="myNavbar">
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right menuToggle" title="Toggle Navigation Menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <a href="#home" data-menuanchor="home" class="w3-bar-item w3-hover-black w3-button"><b>VANESSA SCHILL</b></a>
+                <a href="#portfolio" data-menuanchor="portfolio" class="w3-bar-item w3-hover-black w3-button w3-hide-small"><i class="fa fa-folder-open"></i> PORTFOLIO</a>
+                <a href="#bio" data-menuanchor="bio" class="w3-bar-item w3-hover-black w3-button w3-hide-small"><i class="fa fa-user"></i> BIO</a>
+                <a href="#proficiencies" data-menuanchor="proficiencies" class="w3-bar-item w3-hover-black w3-button w3-hide-small"><i class="fa fa-check"></i> PROFICIENCIES</a>
+                <a href="#contact" data-menuanchor="contact" class="w3-bar-item w3-hover-black w3-button w3-hide-small"><i class="fa fa-bullhorn"></i> CONTACT</a>
             </div>
 
             <!-- Navbar on small screens -->
-            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-                <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-                <a href="#bio" class="w3-bar-item w3-button" onclick="toggleFunction()">BIO</a>
-                <a href="#proficiencies" class="w3-bar-item w3-button" onclick="toggleFunction()">PROFICIENCIES</a>
-                <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <div id="mobileNav" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                <a href="#portfolio" data-menuanchor="portfolio" class="w3-bar-item w3-button menuToggle">PORTFOLIO</a>
+                <a href="#bio" data-menuanchor="bio" class="w3-bar-item w3-button menuToggle">BIO</a>
+                <a href="#proficiencies" data-menuanchor="proficiencies" class="w3-bar-item w3-button menuToggle">PROFICIENCIES</a>
+                <a href="#contact" data-menuanchor="contact" class="w3-bar-item w3-button menuToggle">CONTACT</a>
             </div>
         </div>
 
@@ -41,11 +37,11 @@
         <div id="fullpage">
 
             <!-- Section 1 - Home -->
-            <div class="bgimg-1 section w3-padding-64" data-menuanchor="home">
+            <div class="bgimg-1 section w3-padding-64" data-anchor="home">
                 <div class="w3-display-middle" style="white-space: nowrap;">
                     <span id="main-title-large" class="w3-center w3-padding-large w3-text-white w3-animate-opacity w3-hide-small">VANESSA SCHILL</span>
-                    <p class="main-title-small w3-center w3-padding-large w3-text-white w3-animate-opacity w3-hide-large w3-hide-medium">VANESSA</p>
-                    <p class="main-title-small w3-center w3-padding-large w3-text-white w3-animate-opacity w3-hide-large w3-hide-medium">SCHILL</p>
+                    <p class="main-title-small w3-center w3-text-white w3-animate-opacity w3-hide-large w3-hide-medium" style="margin: 5px 0 5px 0;">VANESSA</p>
+                    <p class="main-title-small w3-center w3-text-white w3-animate-opacity w3-hide-large w3-hide-medium" style="margin: 5px 0 5px 0;">SCHILL</p>
                     <p class="w3-padding-large light-green w3-center w3-xlarge w3-wide w3-animate-opacity w3-text-white w3-hide-small">eLearning and Instructional Design</p>
                     <p class="w3-padding-large w3-center w3-xlarge w3-animate-opacity w3-text-white w3-hide-large w3-hide-medium">Instructional Design</p>
                 </div>
@@ -53,43 +49,44 @@
             <!-- End Section 1 - Home -->
 
             <!-- Section 2 - Portfolio -->
-            <div class="bgimg-2 section w3-text-white" data-menuanchor="portfolio">
+            <div class="bgimg-2 section w3-text-white" data-anchor="portfolio">
 
                 <div class="w3-container w3-content w3-padding">
-                    <p class="w3-jumbo section-title w3-text-white w3-wide w3-center">PORTFOLIO</p>
+                    <p class="w3-jumbo section-title w3-text-white w3-wide w3-center w3-hide-small">PORTFOLIO</p>
+                    <p class="w3-xxxlarge section-title w3-text-white w3-center w3-hide-medium w3-hide-large" style="margin-bottom: 0;">PORTFOLIO</p>
                     
                     <!-- Responsive Grid. Three columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
                     <div class="w3-row-padding w3-center">
-                        <div class="w3-col m4 portfolio">
+                        <div class="w3-col m4 w3-hover-shadow portfolio w3-margin-bottom">
                             <h4>
                                 <a href="./portfolio/instructional-design.html" class="portfolio-link">
                                     Instructional Design
                                 </a>
                             </h4>
                             <a href="./portfolio/instructional-design.html">
-                                <img src="./assets/IMG_6788.PNG" style="width:100%" class="w3-hover-opacity" alt="instructional design">
+                                <img src="./assets/IMG_6788.PNG" class="w3-hover-opacity portfolio-thumb" alt="instructional design">
                             </a>
                         </div>
 
-                        <div class="w3-col m4 portfolio">
+                        <div class="w3-col m4 w3-hover-shadow portfolio w3-margin-bottom">
                             <h4>
                                 <a href="./portfolio/sales.html" class="portfolio-link">
                                     Sales
                                 </a>
                             </h4>
                             <a href="./portfolio/sales.html" class="portfolio-link">
-                                <img src="./assets/beehive_of_sales.jpg" style="width:100%;" class="w3-hover-opacity" alt="sales">
+                                <img src="./assets/beehive_of_sales.jpg" class="w3-hover-opacity portfolio-thumb" alt="sales">
                             </a>
                         </div>
 
-                        <div class="w3-col m4 portfolio">
+                        <div class="w3-col m4 w3-hover-shadow portfolio w3-margin-bottom">
                             <h4>
                                 <a href="https://vanessaschill.contently.com" class="portfolio-link">
                                     Published Work
                                 </a>
                             </h4>
                             <a href="https://vanessaschill.contently.com">
-                                <img src="./assets/reflecting_pool_publications.jpg" style="width:100%" class="w3-hover-opacity" alt="published work">
+                                <img src="./assets/reflecting_pool_publications.jpg" class="w3-hover-opacity portfolio-thumb" alt="published work">
                             </a>
                         </div>
                         
@@ -100,13 +97,15 @@
             <!-- End Section 2 - Portfolio -->
             
             <!-- Section 3 - Bio -->
-            <div class="bgimg-3 section dark-green-background" data-menuanchor="bio">
+            <div class="bgimg-3 section dark-green-background" data-anchor="bio">
 
-                <div class="w3-container w3-content w3-padding">
-                    <p class="w3-jumbo w3-wide w3-center w3-text-white section-title">BIO</p>
+                <div class="w3-container w3-content w3-padding w3-margin-bottom">
+                    <p class="w3-jumbo w3-wide w3-center w3-text-white section-title w3-hide-small">BIO</p>
+                    <p class="w3-xxxlarge section-title w3-text-white w3-center w3-hide-medium w3-hide-large" style="margin-bottom: 0;">BIO</p>
                     <div class="w3-row w3-card-4 about-card light-green">
                         <div class="w3-col m4 about-section">
-                            <img id="mugshot" src="./assets/vanessa_schill_mugshot.jpg" class="w3-circle w3-border w3-image w3-grayscale-max" alt="Photo of Me" width="250">
+                            <img id="mugshot" src="./assets/vanessa_schill_mugshot.jpg" class="w3-circle w3-border w3-image w3-grayscale-max w3-hide-small" alt="Photo of Me" width="250">
+                            <img id="mugshot" src="./assets/vanessa_schill_mugshot.jpg" class="w3-circle w3-border w3-image w3-grayscale-max w3-hide-medium w3-hide-large" alt="Photo of Me" width="200">
                         </div>
 
                         <div class=" w3-container w3-col m8 w3-padding w3-margin-top w3-text-white">
@@ -132,16 +131,18 @@
             <!-- End Section 3 - Bio -->
             
             <!-- Section 4 - Proficiencies -->
-            <div class="bgimg-4 section" data-menuanchor="proficiencies">
 
+            <!-- Slides for desktop and tablet -->
+            <div class="bgimg-4 proficiencies w3-container section fp-auto-height-responsive" data-anchor="proficiencies">
                 
                 <!-- Slide 1 -->
-                <div class="w3-container w3-padding slide" data-anchor="slide1">
+                <div class="slide" data-anchor="slide1">
                     
-                    <p class="w3-jumbo w3-wide w3-center w3-text-white section-title w3-text-black" style="margin-bottom: 0;">PROFICIENCIES</p>
+                    <p class="w3-jumbo w3-wide w3-center w3-text-white section-title w3-hide-small" style="margin-bottom: 0;">PROFICIENCIES</p>
+                    <p class="w3-xxlarge section-title w3-text-white w3-center w3-hide-medium w3-hide-large" style="margin-bottom: 0;">PROFICIENCIES</p>
                     
                     <div class="w3-container w3-content w3-row-padding">
-                        <div class="w3-col m6">
+                        <div class="w3-col l6 m6 s12">
                             <ul class="w3-card-4 w3-border w3-ul w3-white">
                                 <li><h2>Degrees</h2></li>
                                 <li class="w3-padding">
@@ -155,10 +156,10 @@
                             </ul>
                         </div>
                         
-                        <div class="w3-col m6">
+                        <div class="w3-col l6 m6 s12">
                             <ul class="w3-card-4 w3-border w3-ul w3-white">
                                 <li><h2>Certifications</h2></li>
-                                <li class="w3-padding">Quaity Matters (instructor and instructional designer)</li>
+                                <li class="w3-padding">Quality Matters (instructor and instructional designer)</li>
                                 <li class="w3-padding">Large Enrollment Online Courses certification; Kennesaw State University Office of Distance Education
                                 </li>
                                 <li class="w3-padding">Certified Occupancy Speciality (Affordable Housing)</li>
@@ -170,11 +171,12 @@
                 </div> <!-- End slide 1 -->
                 
                 <!-- Slide 2 -->
-                <div class="w3-container w3-padding slide" data-anchor="slide2">
+                <div class="slide" data-anchor="slide2">
                     
-                    <p class="w3-jumbo w3-wide w3-center w3-text-white section-title w3-text-black" style="margin-bottom: 0;">PROFICIENCIES</p>
+                    <p class="w3-jumbo w3-wide w3-center w3-text-white section-title w3-hide-small" style="margin-bottom: 0;">PROFICIENCIES</p>
+                    <p class="w3-xxlarge section-title w3-text-white w3-center w3-hide-medium w3-hide-large" style="margin-bottom: 0;">PROFICIENCIES</p>
                 
-                    <div class="w3-container w3-content">
+                    <div class="w3-container w3-content w3-margin-bottom">
                         <div class="w3-card-4 w3-white">
                             <div class="w3-row">
                                 <div class="w3-col">
@@ -182,7 +184,7 @@
                                 </div>
                             </div>
                             <div class="w3-row">
-                                <div class="w3-col m6">
+                                <div class="w3-col l6 m6 s12">
                                     <ul class="w3-ul w3-border w3-white">
                                         <li class="w3-padding">Doceri</li>
                                         <li class="w3-padding">Desire2Learn</li>
@@ -192,7 +194,7 @@
                                         <li class="w3-padding">MS Office 365</li><li class="w3-padding">WebWorks</li>
                                     </ul>
                                 </div>
-                                <div class="w3-col m6">
+                                <div class="w3-col l6 m6 s12">
                                     <ul class="w3-ul w3-border w3-white">
                                         <li class="w3-padding">Moodle</li>
                                         <li class="w3-padding">Confluence</li>
@@ -210,6 +212,69 @@
                 </div> <!-- End slide 2 -->
 
             </div>
+
+            <!-- End slide format for desktop/tablet -->
+
+            <!-- Slides combined into one section for mobile -->
+            <!--<div class="bgimg-4 w3-container w3-padding skills w3-hide-medium w3-hide-large">
+                    
+                <p class="w3-xxlarge section-title w3-text-white w3-center w3-hide-medium w3-hide-large" style="margin-bottom: 0;">PROFICIENCIES</p>
+
+                <div class="w3-container w3-content">
+                    
+                    <ul class="w3-card-4 w3-border w3-ul w3-white">
+                        <li>
+                            <h2>Degrees</h2>
+                        </li>
+                        <li class="w3-padding">
+                            <span class="w3-large">M.A. in American Studies</span>
+                            <span>Kennesaw State University, 2016</span>
+                        </li>
+                        <li class="w3-padding">
+                            <span class="w3-large">B.S. in Communication</span>
+                            <span>Kennesaw State University, 2012</span>
+                        </li>
+                    </ul>
+                                                
+                    <ul class="w3-card-4 w3-border w3-ul w3-white">
+                        <li>
+                            <h2>Certifications</h2>
+                        </li>
+                        <li class="w3-padding">Quaity Matters (instructor and instructional designer)</li>
+                        <li class="w3-padding">Large Enrollment Online Courses certification; Kennesaw State University Office of Distance
+                            Education
+                        </li>
+                        <li class="w3-padding">Certified Occupancy Speciality (Affordable Housing)</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="w3-container w3-content">
+                    <div class="w3-card-4 w3-white">
+
+                        <ul class="w3-ul w3-border w3-white">
+                            <li><h2>Technologies</h2></li>
+                            <li class="w3-padding">Doceri</li>
+                            <li class="w3-padding">Desire2Learn</li>
+                            <li class="w3-padding">Voicethread</li>
+                            <li class="w3-padding">Panopto</li>
+                            <li class="w3-padding">Google Apps Suite</li>
+                            <li class="w3-padding">MS Office 365</li>
+                            <li class="w3-padding">WebWorks</li>
+                            <li class="w3-padding">Moodle</li>
+                            <li class="w3-padding">Confluence</li>
+                            <li class="w3-padding">Adobe Spark</li>
+                            <li class="w3-padding">Adobe FrameMaker</li>
+                            <li class="w3-padding">Adobe InDesign</li>
+                            <li class="w3-padding">Adobe Photoshop</li>
+                            <li class="w3-padding">Camtasia</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>-->
             <!-- End Section 4 - Proficiencies -->
             
             <!-- Section 5 - Kudos -->
@@ -237,15 +302,16 @@
             <!-- End Section 5 - Kudos -->
             
             <!-- Section 6 - Contact -->
-            <div class="bgimg-6 section" data-menuanchor="contact">
+            <div class="bgimg-6 section" data-anchor="contact">
 
                 <div class="w3-container w3-content w3-padding">
-                    <p class="w3-jumbo w3-wide w3-center w3-text-white section-title w3-text-black" style="margin-bottom: 0;">CONTACT ME</p>
+                    <p class="w3-jumbo w3-wide w3-center section-title w3-text-black w3-hide-small" style="margin-bottom: 0;">CONTACT ME</p>
+                    <p class="w3-xxxlarge section-title w3-text-black w3-center w3-hide-medium w3-hide-large" style="margin-bottom: 0;">CONTACT ME</p>
 
-                    <div class="w3-card-4" style="padding: 50px 0 50px 0; margin: 30px auto 24px auto; max-width: 400px;">
+                    
                         <div class="w3-row-padding w3-margin-top">
 
-                            <div class="w3-col">
+                            <div class="w3-col m1">
                                 <div class="w3-bar" style="max-width: 240px; margin-right:auto; margin-left:auto;">
                                     <a href="https://twitter.com/v_schill" class="w3-bar-item w3-large w3-hover-opacity" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a>
                                     <a href="https://www.linkedin.com/in/vanessaschill/" class="w3-bar-item w3-large w3-hover-opacity" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
@@ -254,24 +320,23 @@
 
                             </div>
 
-                        </div>
-
-                        <div class="w3-row-padding">
-
-                            <div class="w3-col">
-                                <h3 class="w3-center w3-hover-opacity"><a href="mailto:vanessa.n.schill@gmail.com?Subject=Hello!" target="top" style="text-decoration: none;"><i class="fa fa-envelope w3-padding"></i>vanessa.n.schill@gmail.com</a></h3>
-                                <!--<form class="w3-panel w3-card-4" style="max-width: 500px; margin-right:auto; margin-left:auto;">
-                                <h2>Send me an email</h2>
-                                <p><input type="text" class="w3-input" placeholder="Name"></p>
-                                <p><input type="email" class="w3-input" placeholder="Email"></p>
-                                <p><input type="text" class="w3-input" placeholder="Subject"></p>
-                                <p><textarea class="w3-input" placeholder="Message ..."></textarea></p>
-                                <p><button class="w3-btn w3-black">SEND</button></p>
-                            </form>-->
+                            <div class="w3-col m11">
+                                <form class="w3-panel w3-card-4" style="max-width: 500px; margin-right:auto; margin-left:auto;" action="mailto:rpschill@gmail.com" method="post" enctype="text/plain">
+                                    <h2>Send me an email</h2>
+                                    <p><input type="text" class="w3-input" placeholder="Name"></p>
+                                    <p><input type="email" class="w3-input" placeholder="Email"></p>
+                                    <p><input type="text" class="w3-input" placeholder="Subject"></p>
+                                    <p><textarea class="w3-input" placeholder="Message ..."></textarea></p>
+                                    <p>
+                                        <span class="w3-bar">
+                                            <input type="submit" value="SEND" class="w3-button w3-border w3-border-white w3-hover-border-black w3-hover-black">
+                                            <input type="reset" value="RESET" class="w3-button w3-border w3-border-white w3-hover-border-red w3-hover-red">
+                                        </span>        
+                                    </p>
+                                </form>
                             </div>
 
                         </div>
-                    </div>
 
                 </div>
 
@@ -285,6 +350,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
         <!-- Add fullpage.js via CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/vendors/scrolloverflow.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
 
         <script src="app.js"></script>

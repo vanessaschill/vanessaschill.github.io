@@ -12,7 +12,7 @@ body, html {
 /* Create a Parallax Effect */
 
 
-/*.bgimg-1, .bgimg-2, .bgimg-3 {
+/*.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,19 +37,36 @@ h1, h2, h3, h4, h5 {
 
 .portfolio-link, .section-title {
     font-family: "Josefin Sans", sans-serif;
-} 
-
-.about-text {
-    font-size: 15px;
-    margin-top: 32px;
 }
 
-.about-card {
-    border-radius: 148px 0 0 148px;
+.portfolio-thumb {
+    width: 100%;
 }
 
-.about-section {
-    margin-top: 4px;
+@media (max-width: 600px) {
+    .about-card {
+        border-radius: 148px 0 0 0;
+    }
+    .about-section {
+        margin-top: 6px;
+    }
+    .about-text {
+        font-size: 15px;
+        margin-top: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-card {
+        border-radius: 148px 0 0 148px;
+    }
+    .about-section {
+        margin-top: 55px;
+    }
+    .about-text {
+        font-size: 18px;
+        margin-top: 32px;
+    }
 }
 
 #mugshot {
@@ -89,6 +106,7 @@ h1, h2, h3, h4, h5 {
     background-size: cover;
 }
 
+
 /* Second image (Portfolio) */
 
 .bgimg-2 {
@@ -112,34 +130,45 @@ h1, h2, h3, h4, h5 {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+
 /* Fourth image (Proficiencies) */
 
 .bgimg-4 {
-    background: #D3959B;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #D3959B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BFE6BA, #D3959B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 /* Fifth image (Kudos) */
 
 .bgimg-5 {
-    background: #FFA17F;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #00223E, #FFA17F);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #FFA17F;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #00223E, #FFA17F);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #00223E, #FFA17F);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 /* Sixth image (Contact) */
 
 .bgimg-6 {
-    background: #43C6AC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #43C6AC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #F8FFAE, #43C6AC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F8FFAE, #43C6AC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .sales-page-wrapper {
     background-color: #669999;
 }
-
 
 .w3-wide {
     letter-spacing: 10px;
@@ -157,15 +186,6 @@ h1, h2, h3, h4, h5 {
     background: transparent;
 }
 
-
-/* Turn off parallax scrolling for tablets and phones */
-
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
-
 a.portfolio-link {
     text-decoration: none;
 }
@@ -176,4 +196,11 @@ a.portfolio-link {
 
 .fp-controlArrow {
     margin: 0 32px 0 32px;
+}
+
+@media (max-width: 768px) {
+    .fp-controlArrow {
+        display: none !important;
+    }
+
 }
