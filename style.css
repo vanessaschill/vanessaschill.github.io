@@ -111,64 +111,7 @@ html {
 
 
 
-/* Second image (Portfolio) */
 
-.bgimg-2 {
-    /* background: #FF5F6D; */
-    /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D); */
-    /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, #FFC371, #FF5F6D); */
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-/* Third image (Bio) */
-
-.bgimg-3 {
-    background: #002929;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #002929, #669999);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #002929, #669999);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-/* Fourth image (Proficiencies) */
-
-.bgimg-4 {
-    background: #D3959B;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #BFE6BA, #D3959B);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-/* Fifth image (Kudos) */
-
-.bgimg-5 {
-    background: #FFA17F;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #00223E, #FFA17F);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #00223E, #FFA17F);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-/* Sixth image (Contact) */
-
-.bgimg-6 {
-    background: #43C6AC;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #F8FFAE, #43C6AC);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #F8FFAE, #43C6AC);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
 .sales-page-wrapper {
     background-color: #669999;
