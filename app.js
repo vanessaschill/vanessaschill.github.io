@@ -1,5 +1,11 @@
 $(document).ready(function () {
     
+    /**
+     * 
+     * Typerwriter animation
+     * 
+     */
+    
     var TxtType = function (el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -109,15 +115,6 @@ $(document).ready(function () {
 
     $( '.menuToggle' ).click( function () {
         $( '#mobileNav' ).toggleClass( 'w3-show' );
-    });
-    
-
-    /**
-     * 
-     * Typerwriter animation
-     * 
-     */
-
-     
+    }); 
 
 } );

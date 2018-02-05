@@ -1,40 +1,27 @@
+* {
+    font-family: 'Helvetica', sans-serif;
+}
+
 body {
-    font-family: "Josefin Sans", sans-serif;
+    background-color: #000;
 }
 
 body,
 html {
     height: 100%;
-    color: #777;
+    color: #fff;
     line-height: 1.8;
-}
-
-.bgimg-1 {
-    background-color: #000;
 }
 
 .typewriter {
     margin-left: auto;
     margin-right: auto;
-    color: #fff;
-    font-family: 'Helvetica', sans-serif;
 }
 
 .typewriter a {
     text-decoration: none;
 }
 
-
-/* #typewriter {
-    color: #fff;
-    font-size: 2em;
-    margin: 0;
-}
-
-#typewriter:after {
-    content: '|';
-    animation: blink 500ms linear infinite alternate;
-} */
 
 @keyframes blink {
     0% {
@@ -68,47 +55,6 @@ html {
     50% {
         border-color: orange;
     }
-}
-
-
-/* Create a Parallax Effect */
-
-
-/*.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: "Josefin Sans", sans-serif;
-}
-
-#main-title-large,
-.main-title-small {
-    font-family: "Anton", sans-serif;
-}
-
-#main-title-large {
-    font-size: 154px;
-}
-
-.main-title-small {
-    font-size: 72px;
-}
-
-.portfolio-link,
-.section-title {
-    font-family: "Josefin Sans", sans-serif;
-}
-
-.portfolio-thumb {
-    width: 100%;
 }
 
 @media (max-width: 600px) {
@@ -164,26 +110,15 @@ h5 {
 }
 
 
-/* First image (Logo. Full height) */
-
-
-/* .bgimg-1 {
-    background-image: url('./assets/bg_01.png');
-    background-attachment: scroll;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
 
 /* Second image (Portfolio) */
 
 .bgimg-2 {
-    background: #FF5F6D;
+    /* background: #FF5F6D; */
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);
+    /* background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D); */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFC371, #FF5F6D);
+    /* background: linear-gradient(to right, #FFC371, #FF5F6D); */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
