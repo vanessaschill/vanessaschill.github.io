@@ -2,10 +2,72 @@ body {
     font-family: "Josefin Sans", sans-serif;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     color: #777;
     line-height: 1.8;
+}
+
+.bgimg-1 {
+    background-color: #000;
+}
+
+.typewriter {
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.typewriter a {
+    text-decoration: none;
+}
+
+
+/* #typewriter {
+    color: #fff;
+    font-size: 2em;
+    margin: 0;
+}
+
+#typewriter:after {
+    content: '|';
+    animation: blink 500ms linear infinite alternate;
+} */
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
 }
 
 
@@ -19,11 +81,16 @@ body, html {
     background-size: cover;
 }*/
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: "Josefin Sans", sans-serif;
 }
 
-#main-title-large, .main-title-small {
+#main-title-large,
+.main-title-small {
     font-family: "Anton", sans-serif;
 }
 
@@ -35,7 +102,8 @@ h1, h2, h3, h4, h5 {
     font-size: 72px;
 }
 
-.portfolio-link, .section-title {
+.portfolio-link,
+.section-title {
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -98,13 +166,14 @@ h1, h2, h3, h4, h5 {
 
 /* First image (Logo. Full height) */
 
-.bgimg-1 {
+
+/* .bgimg-1 {
     background-image: url('./assets/bg_01.png');
-    background-attachment: fixed;
-    background-position: center;
+    background-attachment: scroll;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 
 /* Second image (Portfolio) */
@@ -202,5 +271,4 @@ a.portfolio-link {
     .fp-controlArrow {
         display: none !important;
     }
-
 }
