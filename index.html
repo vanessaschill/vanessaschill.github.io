@@ -265,16 +265,16 @@
                             </div>
 
                             <div class="w3-col m11">
-                                <form class="w3-panel w3-card-4" style="max-width: 500px; margin-right:auto; margin-left:auto;" action="https://teleform.glitch.me/c/446621265" method="post" enctype="text/plain">
+                                <form class="w3-panel w3-card-4" style="max-width: 500px; margin-right:auto; margin-left:auto;" action="https://teleform.glitch.me/c/446621265" method="post" enctype="application/json" name="contact_form">
                                     <h2>Send me an email</h2>
-                                    <p><input type="text" class="w3-input" placeholder="Name"></p>
-                                    <p><input type="email" class="w3-input" placeholder="Email"></p>
-                                    <p><input type="text" class="w3-input" placeholder="Subject"></p>
-                                    <p><textarea class="w3-input" placeholder="Message ..."></textarea></p>
+                                    <p><input type="text" class="w3-input" placeholder="Name" name="contact_name"></p>
+                                    <p><input type="email" class="w3-input" placeholder="Email" name="contact_email"></p>
+                                    <p><input type="text" class="w3-input" placeholder="Subject" name="contact_subject"></p>
+                                    <p><textarea class="w3-input" placeholder="Message ..." name="contact_message"></textarea></p>
                                     <p>
                                         <span class="w3-bar">
-                                            <input type="submit" value="SEND" class="w3-button w3-border w3-border-white w3-hover-border-black w3-hover-black">
-                                            <input type="reset" value="RESET" class="w3-button w3-border w3-border-white w3-hover-border-red w3-hover-red">
+                                            <button type="submit" class="w3-button w3-border w3-border-white w3-hover-border-black w3-hover-black">SEND</button>
+                                            <button type="reset" class="w3-button w3-border w3-border-white w3-hover-border-red w3-hover-red">RESET</button>
                                         </span>        
                                     </p>
                                 </form>
