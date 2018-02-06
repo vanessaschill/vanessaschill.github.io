@@ -109,7 +109,13 @@ html {
     color: #000;
 }
 
+.emph {
+    font-weight: 800;
+}
 
+.ital {
+    font-style: italic;
+}
 
 
 
