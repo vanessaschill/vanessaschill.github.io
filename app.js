@@ -173,7 +173,7 @@ $(document).ready(function () {
     form.addEventListener('change', checkValidity);
     form.addEventListener('change', setResetBtnState);
 
-    function onRecaptchaCompletion (response) {
+    var onRecaptchaCompletion = function (response) {
         console.log('recaptcha response', response);
     }
     
