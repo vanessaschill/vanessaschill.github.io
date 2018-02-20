@@ -43,8 +43,6 @@ function invalidForm () {
 }
 
 function onSubmit (token) {
-    var response = grecaptcha.getResponse(submitBtn);
-    console.log('recaptcha response', response);
     return form.submit();
 }
 
