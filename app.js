@@ -132,13 +132,13 @@ $(document).ready(function () {
      * 
      */
 
-    var form = document.getElementById('contactForm'),
-        name = document.getElementById('name'),
-        email = document.getElementById('email'),
-        subject = document.getElementById('subject'),
-        content = document.getElementById('content'),
-        submitBtn = document.getElementById('submitBtn'),
-        resetBtn = document.getElementById('resetBtn');
+    var form = $('#contactForm'),
+        name = $('#name'),
+        email = $('#email'),
+        subject = $('#subject'),
+        content = $('#content'),
+        submitBtn = $('#submitBtn'),
+        resetBtn = $('#resetBtn');
     
     submitBtn.setAttribute('disabled', '');
 
