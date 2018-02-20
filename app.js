@@ -138,8 +138,7 @@ $(document).ready(function () {
         subject = document.getElementById('subject'),
         content = document.getElementById('content'),
         submitBtn = document.getElementById('submitBtn'),
-        resetBtn = document.getElementById('resetBtn'),
-        gre = document.getElementById('gre');
+        resetBtn = document.getElementById('resetBtn');
 
     function checkValidity () {
         var formValidityResponse = form.reportValidity();
@@ -172,13 +171,13 @@ $(document).ready(function () {
     }
 
     function YourOnSubmitFn () {
-        var response = grecaptcha.getResponse(gre);
+        var response = grecaptcha.getResponse(submitBtn);
         console.log('recaptcha response', response);
     }
 
     form.addEventListener('change', checkValidity);
     form.addEventListener('change', setResetBtnState);
-    gre.addEventListener('change', onRecaptchaCompletion);
+    gre.addEventListener('change', YourOnSubmitFn);
     
     
 });

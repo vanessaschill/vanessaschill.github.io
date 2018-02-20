@@ -267,13 +267,9 @@
                                         <textarea class="w3-input form-field" id="content" placeholder="Message ..." name="contact_message"></textarea>
                                     </p>
 
-                                    <button id="gre" class="g-recaptcha" data-sitekey="6LeUkkcUAAAAAIxgvNgCHStcOwTn_W8gVYFVvCNB" data-callback="YourOnSubmitFn">
-                                        Submit
-                                    </button>
-
                                     <p>
                                         <span class="w3-bar">
-                                            <button type="submit" id="submitBtn" class="w3-button w3-border w3-border-white" disabled>SEND</button>
+                                            <button type="submit" id="submitBtn" class="g-recaptcha w3-button w3-border w3-border-white" data-sitekey="6LeUkkcUAAAAAIxgvNgCHStcOwTn_W8gVYFVvCNB" data-callback="YourOnSubmitFn" disabled>SUBMIT</button>
                                             <button type="reset" id="resetBtn" class="w3-button w3-border w3-border-white w3-hover-border-red w3-hover-red" disabled>RESET</button>
                                         </span>        
                                     </p>
