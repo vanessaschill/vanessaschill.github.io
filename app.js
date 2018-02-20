@@ -132,13 +132,13 @@ $(document).ready(function () {
      * 
      */
 
-    var form = $('#contactForm'),
-        name = $('#name'),
-        email = $('#email'),
-        subject = $('#subject'),
-        content = $('#content'),
+    var form = document.getElementById('contactForm'),
+        name = document.getElementById('name'),
+        email = document.getElementById('email'),
+        subject = document.getElementById('subject'),
+        content = document.getElementById('content'),
         submitBtn = $('#submitBtn'),
-        resetBtn = $('#resetBtn');
+        resetBtn = document.getElementById('resetBtn');
 
     function checkValidity () {
         var formValidityResponse = form.reportValidity();
