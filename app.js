@@ -165,11 +165,11 @@ $(document).ready(function () {
     }
 
     function validForm () {
-        return submitBtn.removeAttribute('disabled');
+        return submitBtn.removeClass('w3-disabled');
     }
 
     function invalidForm () {
-        return submitBtn.setAttribute('disabled', '');
+        return submitBtn.addClass('w3-disabled');
     }
 
     function onSubmit (token) {
