@@ -139,8 +139,6 @@ $(document).ready(function () {
         content = $('#content'),
         submitBtn = $('#submitBtn'),
         resetBtn = $('#resetBtn');
-    
-    submitBtn.setAttribute('disabled', '');
 
     function checkValidity () {
         var formValidityResponse = form.reportValidity();
