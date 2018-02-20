@@ -170,14 +170,14 @@ $(document).ready(function () {
         return submitBtn.setAttribute('disabled', '');
     }
 
-    function YourOnSubmitFn () {
+    function onSubmit (token) {
         var response = grecaptcha.getResponse(submitBtn);
         console.log('recaptcha response', response);
+        return form.submit();
     }
 
     form.addEventListener('change', checkValidity);
     form.addEventListener('change', setResetBtnState);
-    submitBtn.addEventListener('change', YourOnSubmitFn);
     
     
 });
