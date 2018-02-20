@@ -171,14 +171,14 @@ $(document).ready(function () {
         return submitBtn.setAttribute('disabled', '');
     }
 
-    form.addEventListener('change', checkValidity);
-    form.addEventListener('change', setResetBtnState);
-    gre.addEventListener('change', onRecaptchaCompletion);
-
-    var onRecaptchaSubmit = function () {
+    function YourOnSubmitFn () {
         var response = grecaptcha.getResponse(gre);
         console.log('recaptcha response', response);
     }
+
+    form.addEventListener('change', checkValidity);
+    form.addEventListener('change', setResetBtnState);
+    gre.addEventListener('change', onRecaptchaCompletion);
     
     
 });
