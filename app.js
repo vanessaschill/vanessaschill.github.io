@@ -132,7 +132,50 @@ $(document).ready(function () {
      * 
      */
 
-    
+    var form = document.getElementById('contactForm'),
+        name = document.getElementById('name'),
+        email = document.getElementById('email'),
+        subject = document.getElementById('subject'),
+        content = document.getElementById('content'),
+        submitBtn = document.getElementById('submitBtn'),
+        resetBtn = document.getElementById('resetBtn');
+
+    function checkValidity () {
+        var formValidityResponse = form.reportValidity();
+        if (formValidityResponse) {
+            return validForm();
+        } else if (!formValidityResponse) {
+            return invalidForm();
+        }
+    }
+
+    function setResetBtnState () {
+        var nameValue = name.value,
+            emailValue = email.value,
+            subjectValue = subject.value,
+            contentValue = content.value;
+        
+        if (nameValue !== "" || emailValue !== "" || subjectValue !== "" || contentValue !== "")  {
+            return resetBtn.removeAttribute('disabled');
+        } else {
+            return resetBtn.setAttribute('disabled', '');
+        }
+    }
+
+    function validForm () {
+        return submitBtn.removeAttribute('disabled');
+    }
+
+    function invalidForm () {
+        return submitBtn.setAttribute('disabled', '');
+    }
+
+    form.addEventListener('change', checkValidity);
+    form.addEventListener('change', setResetBtnState);
+
+    function onRecaptchaCompletion (response) {
+        console.log('recaptcha response', response);
+    }
     
     
 });
