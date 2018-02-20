@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="style.css">
         
         <!-- initialize reCAPTCHA for contact form -->
-        <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
 
     <body>
@@ -267,7 +267,9 @@
                                         <textarea class="w3-input form-field" id="content" placeholder="Message ..." name="contact_message"></textarea>
                                     </p>
 
-                                    <div id="gre" class="g-recaptcha" data-theme="dark" data-sitekey="6LfSYEcUAAAAAEypJdhS0ca53eTeuCN43j_Nwo7u"></div>
+                                    <button id="gre" class="g-recaptcha" data-sitekey="6LeUkkcUAAAAAIxgvNgCHStcOwTn_W8gVYFVvCNB" data-callback="onRecaptchaSubmit">
+                                        Submit
+                                    </button>
 
                                     <p>
                                         <span class="w3-bar">

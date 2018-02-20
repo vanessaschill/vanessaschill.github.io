@@ -175,7 +175,7 @@ $(document).ready(function () {
     form.addEventListener('change', setResetBtnState);
     gre.addEventListener('change', onRecaptchaCompletion);
 
-    var onRecaptchaCompletion = function () {
+    var onRecaptchaSubmit = function () {
         var response = grecaptcha.getResponse(gre);
         console.log('recaptcha response', response);
     }
