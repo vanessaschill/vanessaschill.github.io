@@ -177,7 +177,7 @@ $(document).ready(function () {
 
     form.addEventListener('change', checkValidity);
     form.addEventListener('change', setResetBtnState);
-    gre.addEventListener('change', YourOnSubmitFn);
+    submitBtn.addEventListener('change', YourOnSubmitFn);
     
     
 });
