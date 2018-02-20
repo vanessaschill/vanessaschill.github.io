@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <title>Vanessa Schill | Technical Writer and Instructional Designer</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Anton|Josefin+Sans|VT323">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css" />
-    <link rel="stylesheet" href="w3-colors-signal.css">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <title>Vanessa Schill | Technical Writer and Instructional Designer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Anton|Josefin+Sans|VT323">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css" />
+        <link rel="stylesheet" href="w3-colors-signal.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- initialize reCAPTCHA for contact form -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
 
     <body>
 
@@ -59,7 +64,7 @@
             <!-- Section 2 - Portfolio -->
             <div class="bgimg-2 section w3-text-white" data-anchor="portfolio">
 
-                <div class="w3-container w3-content w3-padding">
+                <div id="portfolioContent" class="w3-container w3-content w3-padding">
                     <p class="w3-xxxlarge section-title w3-text-white w3-wide">PORTFOLIO</p>
 
                     <ul>
@@ -85,43 +90,6 @@
                             </p>
                         </li>
                     </ul>
-                    
-                    <!-- Responsive Grid. Three columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-                    <!-- <div class="w3-row-padding w3-center">
-                        <div class="w3-col m4 w3-hover-shadow portfolio w3-margin-bottom">
-                            <h4>
-                                <a href="./portfolio/instructional-design.html" class="portfolio-link">
-                                    Instructional Design
-                                </a>
-                            </h4>
-                            <a href="./portfolio/instructional-design.html">
-                                <img src="./assets/IMG_6788.PNG" class="w3-hover-opacity portfolio-thumb" alt="instructional design">
-                            </a>
-                        </div>
-
-                        <div class="w3-col m4 w3-hover-shadow portfolio w3-margin-bottom">
-                            <h4>
-                                <a href="./portfolio/sales.html" class="portfolio-link">
-                                    Sales
-                                </a>
-                            </h4>
-                            <a href="./portfolio/sales.html" class="portfolio-link">
-                                <img src="./assets/beehive_of_sales.jpg" class="w3-hover-opacity portfolio-thumb" alt="sales">
-                            </a>
-                        </div>
-
-                        <div class="w3-col m4 w3-hover-shadow portfolio w3-margin-bottom">
-                            <h4>
-                                <a href="https://vanessaschill.contently.com" class="portfolio-link" target="_blank">
-                                    Published Work
-                                </a>
-                            </h4>
-                            <a href="https://vanessaschill.contently.com" target="_blank">
-                                <img src="./assets/reflecting_pool_publications.jpg" class="w3-hover-opacity portfolio-thumb" alt="published work">
-                            </a>
-                        </div>
-                        
-                    </div> -->
                 </div>
 
             </div>
@@ -257,24 +225,55 @@
 
                             <div class="w3-col m1">
                                 <div class="w3-bar" style="max-width: 240px; margin-right:auto; margin-left:auto;">
-                                    <a href="https://twitter.com/v_schill" class="w3-bar-item w3-large w3-hover-opacity" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a>
-                                    <a href="https://www.linkedin.com/in/vanessaschill/" class="w3-bar-item w3-large w3-hover-opacity" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
-                                    <a href="http://pinterest.com/vanessa_schill" class="w3-bar-item w3-large w3-hover-opacity" target="_blank"><i class="fa fa-pinterest-square fa-3x"></i></a>
+                                    <a href="https://twitter.com/v_schill" class="w3-bar-item w3-large w3-hover-opacity" target="_blank"><i class="fab fa-twitter-square fa-3x"></i></a>
+                                    <a href="https://www.linkedin.com/in/vanessaschill/" class="w3-bar-item w3-large w3-hover-opacity" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                                    <a href="http://pinterest.com/vanessa_schill" class="w3-bar-item w3-large w3-hover-opacity" target="_blank"><i class="fab fa-pinterest-square fa-3x"></i></a>
                                 </div>
 
                             </div>
 
                             <div class="w3-col m11">
-                                <form class="w3-panel w3-card-4" style="max-width: 500px; margin-right:auto; margin-left:auto;" action="https://teleform.glitch.me/c/446621265" method="post" enctype="application/json" name="contact_form">
+                                <form class="w3-panel" action="https://teleform.glitch.me/c/446621265" method="post" enctype="application/json" name="contact_form">
                                     <h2>Send me an email</h2>
-                                    <p><input type="text" class="w3-input" placeholder="Name" name="contact_name"></p>
-                                    <p><input type="email" class="w3-input" placeholder="Email" name="contact_email"></p>
-                                    <p><input type="text" class="w3-input" placeholder="Subject" name="contact_subject"></p>
-                                    <p><textarea class="w3-input" placeholder="Message ..." name="contact_message"></textarea></p>
+                                    <p class="validator">
+                                        <input type="text" id="name" class="w3-input form-field" placeholder="Name" name="contact_name" required>
+                                            <span class="invalidated w3-tag">
+                                                <i class="fas fa-exclamation-circle"></i>
+                                            </span>
+                                            <span class="validated w3-tag">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                        </input>    
+                                    </p>
+                                    <p>
+                                        <input type="email" id="email" class="w3-input form-field" placeholder="Email" name="contact_email" required>
+                                        <span class="invalidated w3-tag">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                        </span>
+                                        <span class="validated w3-tag">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <input type="text" id="subject" class="w3-input form-field" placeholder="Subject" name="contact_subject" required>
+                                        <span class="invalidated w3-tag">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                        </span>
+                                        <span class="validated w3-tag">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </p>
+                                    <p`>
+                                        <textarea class="w3-input form-field" id="content" placeholder="Message ..." name="contact_message" >
+                                        </textarea>
+                                    </p>
+
+                                    <!-- <div class="g-recaptcha" data-theme="dark" data-sitekey="6LfSYEcUAAAAAEypJdhS0ca53eTeuCN43j_Nwo7u"></div> -->
+
                                     <p>
                                         <span class="w3-bar">
-                                            <button type="submit" class="w3-button w3-border w3-border-white w3-hover-border-black w3-hover-black">SEND</button>
-                                            <button type="reset" class="w3-button w3-border w3-border-white w3-hover-border-red w3-hover-red">RESET</button>
+                                            <button type="submit" id="submitBtn" class="w3-button w3-border w3-border-white" disabled>SEND</button>
+                                            <button type="reset" id="resetBtn" class="w3-button w3-border w3-border-white w3-hover-border-red w3-hover-red">RESET</button>
                                         </span>        
                                     </p>
                                 </form>
@@ -296,7 +295,6 @@
         <!-- Add fullpage.js via CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/vendors/scrolloverflow.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
-
         <script src="app.js"></script>
     </body>
 

@@ -83,6 +83,17 @@ html {
     }
 }
 
+#portfolioContent {
+    position: absolute;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    
+}
+
+#portfolioContent.enter {
+    transform: translateY(100%);
+}
+
 #mugshot {
     margin-top: 24px;
 }
@@ -155,4 +166,41 @@ a.portfolio-link {
     .fp-controlArrow {
         display: none !important;
     }
+}
+
+.w3-input {
+    width: 94% !important;
+    display: inline;
+}
+
+.invalidated {
+    color: red;
+}
+
+.validated {
+    color: green;
+}
+
+.input-span {
+    display: inline;
+}
+
+.validator {
+    display: inline;
+}
+
+input:invalid ~.validated {
+    display: none;
+}
+
+input:invalid ~.invalidated {
+    display: inline-block;
+}
+
+input:valid ~.validated {
+    display: inline-block;
+}
+
+input:valid ~.invalidated {
+    display: none;
 }

@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    
+
     /**
      * 
      * Typerwriter animation
      * 
      */
-    
+
     var TxtType = function (el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -45,7 +45,7 @@ $(document).ready(function () {
         setTimeout(function () {
             that.tick();
         }, delta);
-    }; 
+    };
 
     /**
      *
@@ -53,7 +53,7 @@ $(document).ready(function () {
      *
      */
 
-    $( '#fullpage' ).fullpage( {
+    $('#fullpage').fullpage({
         navigation: true,
         slidesNavigation: true,
         anchors: [
@@ -74,20 +74,20 @@ $(document).ready(function () {
             'Proficiencies',
             'Contact Me'
         ],
-        afterRender: function ( ) {
-            if ( $(window).width() <= 768 ) {
+        afterRender: function () {
+            if ($(window).width() <= 768) {
                 var lastScrollTop = 0;
 
-                $( window ).on( 'scroll', function ( event ) {
-                    var st = $( this ).scrollTop();
-                    if ( st < lastScrollTop ) {
-                        $( '#myNavbar' ).slideDown();
+                $(window).on('scroll', function (event) {
+                    var st = $(this).scrollTop();
+                    if (st < lastScrollTop) {
+                        $('#myNavbar').slideDown();
                     }
                     else {
-                        $( '#myNavbar' ).slideUp();
+                        $('#myNavbar').slideUp();
                     }
                     lastScrollTop = st;
-                } );
+                });
             }
 
             var elements = document.getElementsByClassName('typewrite');
@@ -104,8 +104,17 @@ $(document).ready(function () {
             css.type = "text/css";
             css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff }";
             document.body.appendChild(css);
+        },
+        onLeave: function (index, nextIndex, direction) {
+
+            if (nextIndex === 2 && direction === 'down') {
+
+                var portfolio = $('#portfolioContent');
+
+                portfolio.addClass('enter');
+            }
         }
-    } );
+    });
 
     /**
      *
@@ -113,8 +122,17 @@ $(document).ready(function () {
      *
      */
 
-    $( '.menuToggle' ).click( function () {
-        $( '#mobileNav' ).toggleClass( 'w3-show' );
-    }); 
+    $('.menuToggle').click(function () {
+        $('#mobileNav').toggleClass('w3-show');
+    });
 
-} );
+    /**
+     * 
+     * Contact form functionality
+     * 
+     */
+
+    
+    
+    
+});
