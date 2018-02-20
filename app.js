@@ -42,7 +42,7 @@ function invalidForm () {
     return submitBtn.addClass('w3-disabled');
 }
 
-function onSubmit (token) {
+function onSubmit (submitBtn) {
     return form.submit();
 }
 
