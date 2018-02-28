@@ -230,46 +230,31 @@
                             </div>
 
                             <div class="w3-col m11">
-                                <form id="contactForm" class="w3-panel" action="?" method="post" enctype="application/json" name="contact_form">
+                                <form id="contactForm" class="w3-panel" action="https://jumprock.co/mail/vschill" method="post" name="contact_form">
                                     <h2>Send me an email</h2>
-                                    <p class="validator">
-                                        <input type="text" id="name" class="w3-input form-field" placeholder="Name" name="contact_name" required>
-                                            <span class="invalidated w3-tag">
-                                                <i class="fas fa-exclamation-circle"></i>
-                                            </span>
-                                            <span class="validated w3-tag">
-                                                <i class="fas fa-check"></i>
-                                            </span>
-                                        </input>    
+                                    <p>
+                                        <input class="w3-input" type="text" name="email" placeholder="Your email" />
                                     </p>
                                     <p>
-                                        <input type="email" id="email" class="w3-input form-field" placeholder="Email" name="contact_email" required>
-                                        <span class="invalidated w3-tag">
-                                            <i class="fas fa-exclamation-circle"></i>
-                                        </span>
-                                        <span class="validated w3-tag">
-                                            <i class="fas fa-check"></i>
-                                        </span>
+                                        <input class="w3-input" type="text" name="name" placeholder="Name" />
                                     </p>
                                     <p>
-                                        <input type="text" id="subject" class="w3-input form-field" placeholder="Subject" name="contact_subject" required>
-                                        <span class="invalidated w3-tag">
-                                            <i class="fas fa-exclamation-circle"></i>
-                                        </span>
-                                        <span class="validated w3-tag">
-                                            <i class="fas fa-check"></i>
+                                        <input class="w3-input" type="text" name="subject" placeholder="Subject" />
+                                    </p>
+                                    <p>
+                                        <textarea class="w3-input" name="message" placeholder="Message"></textarea>
+                                    </p>
+                                    <p>
+                                        <input type="hidden" name="after" value="http://vanessaschill.com" />
+                                        <input type="text" name="trapit" value="" style="display: none" />
+                                        <input type="hidden" name="replyto" value="%email" />
+                                    </p>
+                                    <p>
+                                        <span class="w3-bar">
+                                            <input type="submit" class="w3-button w3-border w3-border-white w3-hover-border-black w3-hover-black" value="SEND" />
+                                            <input type="reset" class="w3-button w3-border w3-border-white w3-hover-border-red w3-hover-red" />
                                         </span>
                                     </p>
-                                    <p`>
-                                        <textarea class="w3-input form-field" id="content" placeholder="Message ..." name="contact_message"></textarea>
-                                    </p>
-                                </form>
-
-                                <form id="functionForm">
-                                    <span class="w3-bar">
-                                        <button id="submitBtn" class="g-recaptcha w3-button w3-border w3-border-white w3-disabled" data-sitekey="6LeUkkcUAAAAAIxgvNgCHStcOwTn_W8gVYFVvCNB" data-callback="onSubmit">SUBMIT</button>
-                                        <button type="reset" id="resetBtn" class="w3-button w3-border w3-border-white w3-hover-border-red w3-hover-red" disabled>RESET</button>
-                                    </span>        
                                 </form>
                             </div>
 
@@ -289,8 +274,6 @@
         <!-- Add fullpage.js via CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/vendors/scrolloverflow.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js"></script>
-        <!-- initialize reCAPTCHA for contact form -->
-        <script src='https://www.google.com/recaptcha/api.js' async defer></script>
         <script src="app.js"></script>
     </body>
 
