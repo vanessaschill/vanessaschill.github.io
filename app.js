@@ -1,54 +1,3 @@
-/**
-     * 
-     * Contact form functionality
-     * 
-     */
-
-// var form = document.getElementById('contactForm'),
-//     name = document.getElementById('name'),
-//     email = document.getElementById('email'),
-//     subject = document.getElementById('subject'),
-//     content = document.getElementById('content'),
-//     submitBtn = $('#submitBtn'),
-//     resetBtn = document.getElementById('resetBtn');
-
-// function checkValidity () {
-//     var formValidityResponse = form.reportValidity();
-//     if (formValidityResponse) {
-//         return validForm();
-//     } else if (!formValidityResponse) {
-//         return invalidForm();
-//     }
-// }
-
-// function setResetBtnState () {
-//     var nameValue = name.value,
-//         emailValue = email.value,
-//         subjectValue = subject.value,
-//         contentValue = content.value;
-
-//     if (nameValue !== "" || emailValue !== "" || subjectValue !== "" || contentValue !== "") {
-//         return resetBtn.removeAttribute('disabled');
-//     } else {
-//         return resetBtn.setAttribute('disabled', '');
-//     }
-// }
-
-// function validForm () {
-//     return submitBtn.removeClass('w3-disabled');
-// }
-
-// function invalidForm () {
-//     return submitBtn.addClass('w3-disabled');
-// }
-
-// function onSubmit (submitBtn) {
-//     return form.submit();
-// }
-
-// form.addEventListener('change', checkValidity);
-// form.addEventListener('change', setResetBtnState);
-
 $(document).ready(function () {
 
     /**
@@ -160,9 +109,7 @@ $(document).ready(function () {
 
             if (nextIndex === 2 && direction === 'down') {
 
-                var portfolio = $('#portfolioContent');
-
-                portfolio.addClass('enter');
+                $('#portfolioContent').addClass('enter');
             }
         }
     });

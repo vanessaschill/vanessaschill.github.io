@@ -84,14 +84,14 @@ html {
 }
 
 #portfolioContent {
-    position: absolute;
+    position: relative;
     transition: all 1s ease-in-out;
     opacity: 0;
     
 }
 
 #portfolioContent.enter {
-    transform: translateY(100%);
+    opacity: 1;
 }
 
 #mugshot {
