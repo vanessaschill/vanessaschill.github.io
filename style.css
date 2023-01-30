@@ -1,206 +1,36 @@
+* {
+    font-family: 'Helvetica', sans-serif;
+}
+
 body {
-    font-family: "Josefin Sans", sans-serif;
+    background-color: rgb(255, 204, 0);
 }
 
-body, html {
+body,
+html {
     height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
-
-
-/* Create a Parallax Effect */
-
-
-/*.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
-
-h1, h2, h3, h4, h5 {
-    font-family: "Josefin Sans", sans-serif;
-}
-
-#main-title-large, .main-title-small {
-    font-family: "Anton", sans-serif;
-}
-
-#main-title-large {
-    font-size: 154px;
-}
-
-.main-title-small {
-    font-size: 72px;
-}
-
-.portfolio-link, .section-title {
-    font-family: "Josefin Sans", sans-serif;
-}
-
-.portfolio-thumb {
-    width: 100%;
-}
-
-@media (max-width: 600px) {
-    .about-card {
-        border-radius: 148px 0 0 0;
-    }
-    .about-section {
-        margin-top: 6px;
-    }
-    .about-text {
-        font-size: 15px;
-        margin-top: 32px;
-    }
-}
-
-@media (min-width: 768px) {
-    .about-card {
-        border-radius: 148px 0 0 148px;
-    }
-    .about-section {
-        margin-top: 55px;
-    }
-    .about-text {
-        font-size: 18px;
-        margin-top: 32px;
-    }
-}
-
-#mugshot {
-    margin-top: 24px;
-}
-
-.thumbnail {
-    border: 1px solid #000;
-}
-
-.contact-title-background {
-    background-color: #43C6AC;
-}
-
-.dark-grey {
-    background-color: #202020;
-}
-
-.dark-green-background {
-    background-color: #002929;
-    color: #fff;
-}
-
-.pale-yellow {
-    background-color: #F8FFAE;
     color: #000;
+    /* line-height: 1.8; */
 }
 
-
-/* First image (Logo. Full height) */
-
-.bgimg-1 {
-    background-image: url('./assets/bg_01.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.main-wrapper {
+    height: 100vh;
+    width: 100vh;
 }
 
-
-/* Second image (Portfolio) */
-
-.bgimg-2 {
-    background: #FF5F6D;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFC371, #FF5F6D);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.hero {
+    width: 100%;
+    margin-right: 100%;
+    margin-left: 100%;
 }
 
-
-/* Third image (Bio) */
-
-.bgimg-3 {
-    background: #002929;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #002929, #669999);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #002929, #669999);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.title,
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-/* Fourth image (Proficiencies) */
-
-.bgimg-4 {
-    background: #D3959B;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #BFE6BA, #D3959B);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-/* Fifth image (Kudos) */
-
-.bgimg-5 {
-    background: #FFA17F;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #00223E, #FFA17F);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #00223E, #FFA17F);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-/* Sixth image (Contact) */
-
-.bgimg-6 {
-    background: #43C6AC;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #F8FFAE, #43C6AC);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #F8FFAE, #43C6AC);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.sales-page-wrapper {
-    background-color: #669999;
-}
-
-.w3-wide {
-    letter-spacing: 10px;
-}
-
-.w3-less-wide {
-    letter-spacing: 5px;
-}
-
-.w3-hover-opacity {
-    cursor: pointer;
-}
-
-.btn-transparent {
-    background: transparent;
-}
-
-a.portfolio-link {
-    text-decoration: none;
-}
-
-.w3-text-signal-orange {
-    color: #d4652f;
-}
-
-.fp-controlArrow {
-    margin: 0 32px 0 32px;
-}
-
-@media (max-width: 768px) {
-    .fp-controlArrow {
-        display: none !important;
-    }
-
+.title h4 {
+    margin: 0;
 }
