@@ -29,15 +29,17 @@ const handleTestimonialCarousel = () => {
   let testimonials = [testimonial1, testimonial2, testimonial3];
 
   setInterval(() => {
-    if (testimonial1.classList.contains('show')) {
-      testimonial1.classList.remove('show');
-      testimonial2.classList.add('show');
-    } else if (testimonial2.classList.contains('show')) {
-      testimonial2.classList.remove('show');
-      testimonial3.classList.add('show');
-    } else if (testimonial3.classList.contains('show')) {
-      testimonial3.classList.remove('show');
-      testimonial1.classList.add('show');
+    if (testimonial1?.classList?.length > 0) {
+      if (testimonial1.classList.contains('show')) {
+        testimonial1.classList.remove('show');
+        testimonial2.classList.add('show');
+      } else if (testimonial2.classList.contains('show')) {
+        testimonial2.classList.remove('show');
+        testimonial3.classList.add('show');
+      } else if (testimonial3.classList.contains('show')) {
+        testimonial3.classList.remove('show');
+        testimonial1.classList.add('show');
+      }
     }
   }, 10000);
 
