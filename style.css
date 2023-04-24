@@ -245,6 +245,8 @@ a.link-btn-black span {
 .home-testimonials-text {
     font-size: 1.75rem;
     text-align: center;
+    font-kerning: none;
+    line-height: 2.25rem;
 }
 
 .home-testimonials-author {
