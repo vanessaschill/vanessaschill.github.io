@@ -20,6 +20,10 @@ header .header-container {
     background-color: #000;
     transition: all ease-in-out 250ms;
     z-index: 10;
+    border-bottom: 1px solid #282828;
+    -webkit-box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.75);
 }
 
 .header-title a {
@@ -312,6 +316,7 @@ a.link-btn-black span {
     text-align: center;
     font-kerning: none;
     line-height: 2.25rem;
+    padding: 0 30px;
 }
 
 .home-testimonials-author {
