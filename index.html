@@ -204,9 +204,15 @@
         <div class="home-contact-title">
           <h3>I'd love to work with you.</h3>
         </div>
-        <a class="link-btn-black" type="button" href="./contact">
+        <!-- <a class="link-btn-black" type="button" href="./contact">
           <span>Contact me</span>
-        </a>
+        </a> -->
+        <form action="https://formspree.io/f/xpzagjzw" method-="POST" class="home-contact-form">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="_replyto" placeholder="Your email" required>
+          <textarea name="message" placeholder="Your message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
       </section>
 
     </main>
