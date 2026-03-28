@@ -1,5 +1,3 @@
-/* Portfolio detail pages */
-
 * {
   font-family: 'acumen-pro', sans-serif;
 }
@@ -43,59 +41,6 @@ header .header-container {
   margin-right: 10px;
 }
 
-a.link-btn-white {
-  display: block;
-  text-decoration: none;
-  outline: none;
-  height: 40px;
-  border-radius: 30px;
-  width: fit-content;
-  padding: 7px 30px;
-  margin-top: 30px;
-  transition: all ease-in-out 250ms;
-  background-color: #f8f8f8;
-  border: 1px solid #000;
-  color: #000;
-}
-
-a.link-btn-white:hover {
-  background-color: #000;
-  border: 1px solid #fff;
-}
-
-a.link-btn-white:hover span {
-  color: #fff;
-}
-
-a.link-btn-black {
-  display: block;
-  text-decoration: none;
-  outline: none;
-  height: 40px;
-  border-radius: 30px;
-  width: fit-content;
-  padding: 7px 30px;
-  margin-top: 30px;
-  transition: all ease-in-out 500ms;
-  background-color: #000;
-  border: 1px solid #fff;
-  color: #fff;
-}
-
-a.link-btn-black:hover {
-  background-color: #f8f8f8;
-  border: 1px solid #000;
-}
-
-a.link-btn-black:hover span {
-  color: #000;
-}
-
-a.link-btn-white span,
-a.link-btn-black span {
-  line-height: 40px;
-}
-
 footer {
   height: 300px;
   display: flex;
@@ -131,35 +76,104 @@ footer {
   font-size: 1.15rem;
 }
 
-.contact-main {
+#article-main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
-  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
   margin-left: auto;
-  margin-right: auto; 
-  margin-top: 100px;
-  margin-bottom: 150px;
+  margin-right: auto;
+  max-width: 720px;
+  padding: 0 30px;
 }
 
-.contact-title h1 {
-  font-size: 4rem;
+.article-back {
+  align-self: flex-start;
+  margin-bottom: 40px;
 }
 
-.contact-info-text {
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-info-text a {
+.article-back a {
   text-decoration: none;
-  outline: none;
-  color: #000;
-  margin-bottom: 20px;
+  color: #888;
+  font-size: 0.9rem;
+  transition: color ease-in-out 200ms;
 }
+
+.article-back a:hover {
+  color: #000;
+}
+
+.article-back-bottom {
+  margin-top: 50px;
+  border-top: 1px solid #ccc;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.article-header {
+  width: 100%;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+
+.article-header .article-date {
+  font-size: 0.85rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.article-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.article-image {
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.article-image img {
+  width: 100%;
+  display: block;
+}
+
+.article-image-credit {
+  font-size: 0.78rem;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+.article-body {
+  width: 100%;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #464545;
+}
+
+.pull-quote {
+  margin: 1.8em 0;
+  padding: 0 0 0 24px;
+  border-left: 4px solid #000;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #000;
+}
+
+.article-body p {
+  margin: 0 0 1.4em 0;
+}
+
+.article-body p:last-child {
+  margin-bottom: 0;
+}
+
 
 .hamb {
   cursor: pointer;
@@ -241,7 +255,7 @@ footer {
   }
 
 
-  .contact-title h1 {
-    font-size: 2.5rem;
+  .article-header h1 {
+    font-size: 1.6rem;
   }
 }
