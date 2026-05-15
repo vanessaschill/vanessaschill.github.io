@@ -44,12 +44,6 @@
         <p class="hero__kicker">Senior Instructional Designer · ATD® Master Trainer</p>
         <h1 class="hero__h1">Learning that <em>lands.</em><br>Learner performance<br>that <em>shows.</em></h1>
         <p class="hero__body">I build engaging, measurably effective curricula — combining proven learning methodologies with modern content tools, for organizations that take training seriously.</p>
-        <div class="hero__actions">
-          <a href="/work" class="btn btn--primary">View my work</a>
-          <a href="/contact" class="btn btn--outline">Get in touch</a>
-        </div>
-      </div>
-      <div class="hero__right">
         <div class="hero__stats">
           <div class="hero__stat">
             <span class="hero__stat-num">10+</span>
@@ -63,11 +57,23 @@
             <span class="hero__stat-num">50+</span>
             <span class="hero__stat-lbl">Video assets</span>
           </div>
-          <div class="hero__stat hero__stat--last">
+          <div class="hero__stat">
             <span class="hero__stat-num">15</span>
             <span class="hero__stat-lbl">Technical manuals</span>
           </div>
         </div>
+        <div class="hero__actions">
+          <a href="/work" class="btn btn--primary">View my work</a>
+          <a href="/contact" class="btn btn--outline">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero__right">
+        <img
+          src="/assets/vanessa_hero_headshot.png"
+          alt="Vanessa Schill, Senior Instructional Designer and ATD® Master Trainer"
+          class="hero__photo"
+          loading="eager"
+        >
       </div>
     </section>
     <!-- Ticker -->
@@ -93,12 +99,12 @@
     </div>
     <!-- Clients -->
     <div class="clients">
-      <div class="clients__item"><span class="clients__name">Yardi</span></div>
-      <div class="clients__item"><span class="clients__name">Kennesaw State University</span></div>
-      <div class="clients__item"><span class="clients__name">Georgia EMC</span></div>
-      <div class="clients__item"><span class="clients__name">Surgical Information Systems</span></div>
-      <div class="clients__item"><span class="clients__name">Codemettle</span></div>
-      <div class="clients__item"><span class="clients__name">National Park Service</span></div>
+      <div class="clients__item clients__item--clickable" data-client="innovage"><span class="clients__name">InnovAge</span></div>
+      <div class="clients__item clients__item--clickable" data-client="sis"><span class="clients__name">Surgical Information Systems</span></div>
+      <div class="clients__item clients__item--clickable" data-client="codemettle"><span class="clients__name">CodeMettle</span></div>
+      <div class="clients__item clients__item--clickable" data-client="yardi"><span class="clients__name">Yardi</span></div>
+      <div class="clients__item clients__item--clickable" data-client="ksu"><span class="clients__name">Kennesaw State University</span></div>
+      <div class="clients__item clients__item--clickable" data-client="nps"><span class="clients__name">National Park Service</span></div>
     </div>
     <!-- Featured Project -->
     <section class="featured">
@@ -294,6 +300,99 @@
       <li><a href="/articles">Articles</a></li>
     </ul>
   </footer>
+  <!-- Role modal -->
+  <div class="role-backdrop" id="roleBackdrop" aria-hidden="true">
+    <div class="role-bubble" id="roleBubble" role="dialog" aria-modal="true" aria-labelledby="roleTitle">
+      <button class="role-close" id="roleClose" aria-label="Close">&times;</button>
+      <p class="role-company" id="roleCompany"></p>
+      <h3 class="role-title" id="roleTitle"></h3>
+      <p class="role-dates" id="roleDates"></p>
+      <div class="role-body" id="roleBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const roleData = {
+      innovage: {
+        company: 'InnovAge',
+        title: 'HR Instructional Designer',
+        dates: 'Nov 2024 – Mar 2025 · Remote',
+        body: `<p>Healthcare onboarding is high-stakes. New hires at a PACE organization aren't just learning software. They're learning how to support some of the most vulnerable patients in the healthcare system, and that context shaped everything I built here.</p>
+<p>I designed and facilitated weekly VILT onboarding sessions via MS Teams for cohorts of 2 to 15+ new hires, wrapping everything into a structured one-week program that got people productive fast. Learners ranged from beginner to intermediate in computer fluency, so I adapted instruction in real time, reading each cohort and adjusting as gaps surfaced.</p>
+<p>Beyond delivery, I owned the full onboarding ecosystem: needs analysis with SMEs, LMS provisioning and learning path assignment, equipment coordination across multiple centers, and welcome communications with setup and login instructions. I also rebranded and rebuilt 40+ eLearning modules, including scenario-based learning, microlearning, and just-in-time performance support, measuring impact through learner feedback and the Kirkpatrick methodology.</p>`
+      },
+      sis: {
+        company: 'Surgical Information Systems',
+        title: 'Instructional Designer | Corporate Trainer | Adult Education',
+        dates: 'Jul 2019 – Jan 2024 · 4 yrs 7 mos · Atlanta Metropolitan Area · Remote',
+        body: `<p>SIS is where I really grew into the work. I worked across the full learning ecosystem: new hire onboarding, client-facing product enablement, and just-in-time performance support. The learners were clinical and operational teams who didn't have time to wrestle with a system they barely knew, so everything had to be clear, fast, and actually useful.</p>
+<p>I dug into learner analytics to improve 50+ training videos and manuals, built WalkMe DAP workflows that cut time to proficiency and reduced call volume, and led the product enablement plan for SIS Complete, connecting learning outcomes directly to adoption KPIs.</p>
+<p>I also helped create things that didn't exist yet: the company's first global glossary, a comprehensive Support manual, and standardized workflows for video and DAP content. The kind of foundational work that quietly makes everything else run better.</p>
+<p>Some weeks I was in strategy sessions with senior leadership shaping training policy. Other weeks I was deep in Articulate Rise building storyboards and recording voiceover direction. I liked both.</p>`
+      },
+      codemettle: {
+        company: 'CodeMettle',
+        title: 'Instructional Designer | Content Developer | Technical Writer',
+        dates: 'Oct 2018 – Jul 2019 · 10 mos · Atlanta, Georgia · Hybrid',
+        body: `<p>Reporting directly to the VP of Product, I built the learning and development function from scratch. That started with recruiting and selecting the company's first L&D team, then setting the direction, managing expectations, and keeping assignments moving so the team could do its best work.</p>
+<p>From there, I established the tools, processes, and standards that defined what good learning looked like for the organization.</p>
+<p>In under a year, the team designed and delivered 30+ learning assets, including 5 eLearning courses, 10 ILT programs, and 15 technical manuals for global client teams. I also built a digital onboarding program with role-based learning paths and LMS-hosted modules to accelerate new hire proficiency, and produced a library of 150+ custom graphics, GIFs, and storyboards to support product education.</p>`
+      },
+      yardi: {
+        company: 'Yardi',
+        title: 'Technical Writer',
+        dates: 'Aug 2015 – Oct 2017 · 2 yrs 3 mos · Atlanta Metropolitan Area · On-site',
+        body: `<p>Yardi gave me deep experience in technical documentation for both SaaS and enterprise software products. I authored a full user guide for a complex affordable housing accounting system, conducted independent user acceptance testing to validate workflows and catch gaps before release, and maintained documentation across multiple product lines for internal teams and external clients.</p>
+<p>I also earned a Certified Occupancy Specialist designation during this time, which strengthened my subject matter fluency and made me a better documentation partner to the teams I supported.</p>`
+      },
+      ksu: {
+        company: 'Kennesaw State University',
+        title: 'Part-time Instructor of Communication',
+        dates: 'May 2014 – May 2018 · 4 yrs 1 mo · Kennesaw, GA · Hybrid',
+        body: `<p>As a graduate teaching assistant I designed and taught two courses: Gender, Race, and Media, a cross-listed course in Interdisciplinary Studies and Communication, and Contemporary Issues in Mass Media. Both pushed me to think carefully about how to make complex, sometimes uncomfortable topics accessible and engaging for a range of learners.</p>
+<p>I taught across multiple formats, including in-person, hybrid, and fully online, which gave me early hands-on experience with LMS platforms and distance learning long before either became standard practice.</p>
+<p>I also presented original research at two conferences that year, once as a student at the American Studies Conference at KSU and once as a faculty presenter at the Western States Communication Association conference, where I was part of a panel discussion on Disney and participatory culture.</p>`
+      },
+      nps: {
+        company: 'National Park Service',
+        title: 'Graduate Research Assistant | Instructional Designer',
+        dates: 'Jan 2013 – Jul 2013 · 7 mos · Kennesaw, GA · Hybrid',
+        body: `<p>Collaborated with the U.S. Department of the Interior on a grant-funded curriculum development initiative for Kennesaw Mountain National Battlefield Park. Recruited and led a team of 12 teachers through a two-week curriculum design workshop, then produced a finalized curriculum guide and resource package for Civil War educators in Title I schools, designed for open access across diverse classroom settings.</p>`
+      }
+    };
+
+    const backdrop = document.getElementById('roleBackdrop');
+    const closeBtn = document.getElementById('roleClose');
+
+    function openRole(key) {
+      const data = roleData[key];
+      if (!data) return;
+      document.getElementById('roleCompany').textContent = data.company;
+      document.getElementById('roleTitle').textContent   = data.title;
+      document.getElementById('roleDates').textContent   = data.dates;
+      document.getElementById('roleBody').innerHTML      = data.body;
+      backdrop.classList.add('is-open');
+      backdrop.setAttribute('aria-hidden', 'false');
+      closeBtn.focus();
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeRole() {
+      backdrop.classList.remove('is-open');
+      backdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.clients__item--clickable').forEach(item => {
+      item.addEventListener('click', () => openRole(item.dataset.client));
+    });
+
+    closeBtn.addEventListener('click', closeRole);
+    backdrop.addEventListener('click', e => { if (e.target === backdrop) closeRole(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && backdrop.classList.contains('is-open')) closeRole();
+    });
+  </script>
   <script src="/js/main.js"></script>
 </body>
 </html>

@@ -635,9 +635,9 @@ sup {
 /* ── Homepage: Hero ──────────────────────────────────────────── */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 48px;
-  align-items: end;
+  grid-template-columns: 1fr 400px;
+  gap: 56px;
+  align-items: start;
   padding: 72px var(--pad-x) 64px;
   background: var(--bg);
   border-bottom: 0.5px solid var(--rule-md);
@@ -667,22 +667,22 @@ sup {
   font-size: 15px; line-height: 1.7;
   color: var(--ink2);
   max-width: 500px;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
-.hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero__right {
-  display: flex; flex-direction: column;
-  border-left: 2px solid var(--accent);
-  padding-left: 32px;
-  position: relative;
-}
-.hero__stats { display: flex; flex-direction: column; }
-.hero__stat {
-  padding: 18px 0;
+.hero__stats {
+  display: flex;
+  flex-direction: row;
+  border-top: 0.5px solid var(--rule-md);
   border-bottom: 0.5px solid var(--rule-md);
+  margin-bottom: 32px;
+}
+.hero__stat {
+  flex: 1;
+  padding: 20px 20px 20px 5px;
+  border-right: 0.5px solid var(--rule-md);
   display: flex; flex-direction: column; gap: 4px;
 }
-.hero__stat--last { border-bottom: none; }
+.hero__stat:last-child { border-right: none; }
 .hero__stat-num {
   font-family: var(--serif);
   font-size: 34px; line-height: 1;
@@ -697,21 +697,50 @@ sup {
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--ink2);
 }
+.hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero__right {
+  display: block;
+}
+.hero__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius);
+  display: block;
+}
 
+/* Mid-size: two columns, narrower image column */
 @media (max-width: 900px) {
   .hero {
+    grid-template-columns: 1fr 240px;
+    gap: 36px;
+    padding: 56px var(--pad-x) 48px;
+  }
+  .hero__stats {
+    flex-wrap: wrap;
+  }
+  .hero__stat {
+    flex: 1 1 45%;
+    padding: 16px 16px 16px 0;
+  }
+}
+
+/* Phone: stack vertically, image below title, constrained size */
+@media (max-width: 580px) {
+  .hero {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 28px;
+    padding: 40px var(--pad-x) 36px;
   }
   .hero__right {
-    border-left: none;
-    border-top: 2px solid var(--accent);
-    padding-left: 0;
-    padding-top: 24px;
+    display: flex;
+    justify-content: center;
   }
-  .hero__stats { flex-direction: row; flex-wrap: wrap; gap: 0; }
-  .hero__stat { flex: 1 1 45%; padding: 16px 0; }
-
+  .hero__photo {
+    width: 160px;
+    aspect-ratio: 3 / 4;
+  }
 }
 
 /* ── Homepage: Featured project ──────────────────────────────── */
@@ -781,7 +810,7 @@ sup {
 }
 .home-cta__right {
   display: flex;
-  align-items: flex-end; /* or center, depending on the vibe */
+  align-items: flex-end;
   justify-content: end;
 }
 
@@ -907,4 +936,111 @@ sup {
   font-size: 11px; font-weight: 500;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--accent);
+}
+
+/* ── Clients bar: clickable items ────────────────────────────── */
+.clients__item--clickable {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.clients__item--clickable:hover { background: var(--white); }
+.clients__item--clickable:hover .clients__name { color: var(--ink); }
+
+/* ── Role modal ──────────────────────────────────────────────── */
+.role-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 32, 64, 0.45);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pad-x);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.role-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.role-bubble {
+  position: relative;
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 40px 44px 52px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+/* Speech bubble tail — outer (border colour) */
+/* .role-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 48px;
+  width: 0; height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 20px solid var(--ink);
+  pointer-events: none;
+} */
+/* Speech bubble tail — inner (white fill) */
+/* .role-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50px;
+  width: 0; height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 16px solid var(--white);
+  z-index: 1;
+  pointer-events: none;
+} */
+.role-close {
+  position: absolute;
+  top: 14px; right: 18px;
+  background: none; border: none; cursor: pointer;
+  font-size: 22px; line-height: 1;
+  color: var(--ink2);
+  padding: 4px 8px;
+  transition: color 0.15s;
+}
+.role-close:hover { color: var(--ink); }
+.role-company {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent-dk);
+  margin-bottom: 8px;
+}
+.role-title {
+  font-family: var(--serif);
+  font-size: 24px; line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.role-dates {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink2);
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid var(--rule-md);
+}
+.role-body {
+  font-size: 14px; line-height: 1.85;
+  color: var(--ink2);
+}
+.role-body p + p { margin-top: 14px; }
+
+@media (max-width: 600px) {
+  .role-bubble {
+    padding: 32px 24px 44px;
+    border-radius: 8px;
+  }
+  .role-bubble::after { left: 28px; }
+  .role-bubble::before { left: 30px; }
 }
