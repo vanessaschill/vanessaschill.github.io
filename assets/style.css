@@ -455,9 +455,6 @@ sup {
   color: var(--ink2);
   margin-top: 8px;
 }
-.case-hero__button {
-  margin-top: 24px;
-}
 .case-hero__chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .case-hero__chip {
   font-size: 10px; font-weight: 500;
